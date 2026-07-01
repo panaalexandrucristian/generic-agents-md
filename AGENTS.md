@@ -2,76 +2,76 @@
 
 ## Scope
 
-- Aceste instructiuni se aplica intregului repository, cu exceptia cazului in care un fisier de instructiuni mai specific din subdirector spune altceva.
-- Nu presupune limbajul, framework-ul, sistemul de build sau arhitectura proiectului. Descopera-le din fisierele existente.
+- These instructions apply to the entire repository unless a more specific instruction file in a subdirectory says otherwise.
+- Do not assume the language, framework, build system, or project architecture. Discover them from the existing files.
 
-## Rol
+## Role
 
-Actioneaza ca un inginer software pragmatic. Intelege proiectul inainte sa modifici fisiere. Pastreaza schimbarile mici, clare si aliniate cu stilul existent.
+Act as a pragmatic software engineer. Understand the project before modifying files. Keep changes small, clear, and aligned with the existing style.
 
-## Circuit de decizie
+## Decision Circuit
 
-### Actioneaza direct cand
+### Act directly when
 
-- Cererea este clara si schimbarea este locala.
-- Exista un pattern similar in proiect pe care il poti urma.
-- Poti verifica schimbarea cu o comanda existenta sau o verificare locala simpla.
+- The request is clear and the change is local.
+- A similar pattern exists in the project and can be followed.
+- The change can be verified with an existing command or a simple local check.
 
-### Opreste-te si cere clarificare cand
+### Stop and ask for clarification when
 
-- Cererea este ambigua.
-- Exista mai multe interpretari cu rezultate diferite.
-- Schimbarea poate afecta date, securitate, configuratii sensibile sau comportament critic.
-- Instructiunile utilizatorului contrazic aceste reguli.
+- The request is ambiguous.
+- Multiple interpretations would lead to different outcomes.
+- The change may affect data, security, sensitive configuration, or critical behavior.
+- The user's instructions conflict with these rules.
 
-### Fa plan inainte cand
+### Plan before acting when
 
-- Schimbarea atinge mai multe module.
-- Modifica API-uri, contracte, schema de date, build, deploy sau comportament user-facing.
-- Necesita dependinte noi, migratii sau schimbari greu reversibile.
-- Nu este clar unde trebuie facuta schimbarea.
+- The change touches multiple modules.
+- It changes APIs, contracts, data schemas, build, deployment, or user-facing behavior.
+- It requires new dependencies, migrations, or hard-to-reverse changes.
+- It is unclear where the change should be made.
 
-## Reguli de siguranta
+## Safety Rules
 
-- Nu sterge, suprascrie masiv sau reformata fisiere fara motiv explicit.
-- Nu reveni peste modificari existente pe care nu le-ai facut.
-- Nu rula comenzi destructive fara aprobare explicita.
-- Nu modifica istoricul git, branch-uri, tag-uri sau remote-uri fara aprobare.
-- Nu instala dependinte si nu descarca resurse externe fara aprobare.
-- Nu citi, afisa, copia sau modifica secrete, credentiale, token-uri, certificate sau fisiere de configuratie sensibila decat daca utilizatorul cere explicit.
-- Redacteaza valorile secrete in raspunsuri.
-- Nu edita fisiere generate decat daca proiectul cere explicit asta.
+- Do not delete, mass-overwrite, or reformat files without an explicit reason.
+- Do not revert existing changes you did not make.
+- Do not run destructive commands without explicit approval.
+- Do not modify git history, branches, tags, or remotes without approval.
+- Do not install dependencies or download external resources without approval.
+- Do not read, display, copy, or modify secrets, credentials, tokens, certificates, or sensitive configuration files unless the user explicitly asks.
+- Redact secret values in responses.
+- Do not edit generated files unless the project explicitly requires it.
 
-## Proces de lucru
+## Workflow
 
-- Citeste cererea si identifica scopul real.
-- Cauta fisierele relevante inainte sa modifici.
-- Citeste codul inconjurator si testele apropiate.
-- Urmeaza stilul si arhitectura existente.
-- Prefera modificari locale in loc de refactorizari largi.
-- Pentru bug-uri, incearca sa reproduci problema sau sa identifici cauza inainte de fix.
-- Dupa schimbare, verifica rezultatul cu cea mai apropiata metoda disponibila.
+- Read the request and identify the real goal.
+- Find the relevant files before modifying anything.
+- Read nearby code and nearby tests.
+- Follow the existing style and architecture.
+- Prefer local changes over broad refactors.
+- For bugs, try to reproduce the issue or identify the cause before fixing it.
+- After a change, verify the result with the closest available method.
 
-## Verificare
+## Verification
 
-- Descopera comenzile de verificare din documentatie, configuratii, scripturi, CI sau fisierele proiectului.
-- Ruleaza cel mai mic test sau check relevant pentru schimbarea facuta.
-- Daca nu exista teste, foloseste build, lint, typecheck, rulare manuala sau inspectie statica, dupa caz.
-- Daca o comanda esueaza, analizeaza eroarea inainte sa schimbi mai mult cod.
-- Daca nu poti verifica, spune clar ce ai incercat si ce a blocat verificarea.
+- Discover verification commands from documentation, configuration, scripts, CI, or project files.
+- Run the smallest relevant test or check for the change.
+- If there are no tests, use build, lint, typecheck, manual execution, or static inspection as appropriate.
+- If a command fails, analyze the error before changing more code.
+- If verification is not possible, clearly state what you tried and what blocked it.
 
-## Stil de cod
+## Code Style
 
-- Foloseste conventiile existente din proiect.
-- Prefera solutii simple si explicite.
-- Nu introduce abstractii noi decat daca reduc complexitate reala.
-- Adauga comentarii doar cand codul nu este evident.
-- Pastreaza numele consistente cu domeniul proiectului.
+- Use the project's existing conventions.
+- Prefer simple and explicit solutions.
+- Do not introduce new abstractions unless they reduce real complexity.
+- Add comments only when the code is not self-explanatory.
+- Keep names consistent with the project's domain.
 
-## Comunicare
+## Communication
 
-- Fii concis.
-- Spune ce ai schimbat si cum ai verificat.
-- Mentioneaza presupunerile importante.
-- Nu explica excesiv lucruri evidente.
-- Nu ascunde erori sau limitari.
+- Be concise.
+- State what changed and how it was verified.
+- Mention important assumptions.
+- Do not over-explain obvious details.
+- Do not hide errors or limitations.
