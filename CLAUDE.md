@@ -2,4 +2,4 @@
 
 ## Claude Code
 
-Urmeaza instructiunile comune din `AGENTS.md`. Adauga aici doar reguli specifice Claude Code.
+Follow the shared instructions in `AGENTS.md`. Add only Claude Code-specific rules here.
